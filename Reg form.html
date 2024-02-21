@@ -1,0 +1,173 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Membership Form</title>
+  <style>
+body{
+  background: #d5bfff;
+  display:flex;     
+  justify-content:center;
+  align-items: center;
+  color: black;
+  }
+
+header{
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: 1000;
+}
+.A{
+  max-width: 700px;
+  width: 70%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+  justify-conent:center;
+  text-align:center;
+  border: 2px solid blueviolet;
+ }
+
+.field {
+  position: relative;
+  border-bottom: 2px solid grey;
+  margin: 15px ;
+}
+
+.field:hover{
+  border-bottom: 2px solid #695CFE;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: black;
+}
+
+.field input:focus~label{
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: black;
+}
+
+#remember {
+  accent-color:#695CFE ;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  background: #695CFE;
+  color: white;
+  border: none;
+  width:100%;
+  padding: 12px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  color: darkred;
+  border-color: darkred;
+  background: white;
+}
+
+.title{
+  position: relative;
+}
+.title::before{
+  content: "";
+  position: absolute;
+  bottom:0 ;
+  height: 3px;
+  width: 27px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, red, #695CFE);;
+}
+.A h1{
+  color: darkred;
+}
+.V{
+  margin-top: 30px;
+}
+select{
+  width:70%;
+  height: 30px;
+  font-size: 16px;
+  background: lightgrey;
+  border:none;
+  border-radius: 5px;
+}
+.W{
+  text-align: left;
+  align-items:left;
+  text-justify: left;
+}
+select:focus{
+  border:none;
+  background: darkgrey ;
+}
+  </style>
+</head>
+<body>
+  <div class=A>
+    <form action="#">
+      <h1 class='title'>Login</h1>
+      <div class="field">
+        <input type="text" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="field">
+        <input type="password" required>
+        <label>Enter your password</label>
+      </div>
+<label class='W'>Gender</label>
+<select required>
+<option disabled>Select gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Others</option>
+</select>
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember">
+          <p>Remember me</p>
+        </label>
+        <a href="#">Forgot password?</a>
+      </div>
+      <button type="submit">Log In</button>
+      <div class='V'>
+        Dont have an account? <a href="#">Register</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+  
