@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<title> Dropdown </title>
+<style>
+body{
+	background: black;
+	color: yellow;
+	Font-family:sans-serif;
+	display: flex;
+	justify-content: center;
+}
+.Text{
+	font-size:30px;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.Dbutton{
+	background:blue;
+	font-size: 30px;
+	width= 20px;
+	padding:10px;
+	border:none;
+	border-radius: 5px;
+	color:white;
+}
+.Dbutton:focus{
+	background:white;
+	border: 2px solid blue;
+	color: blue;
+
+}
+.Dropm{}
+.Dropm-content{
+	position:absolute;
+	display:none;
+}
+.Dropm-content a{
+	text-decoration:none;
+	font-family: monospace;
+	padding: 10px 20px;
+	Display:block;
+	background:white;
+	color:black;
+	min-width: 170px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.Dropm-content a:hover{
+	background: lightgrey;
+}
+.show{
+	display:block;
+}
+</style>
+</head>
+<body>
+<center>
+<div class='Text'>
+	DROP DOWN MENU
+</div> <br>
+<p>
+<div 
+	class='Dropm'>
+	<button
+	id='button' 
+	class='Dbutton'>
+		Select Year🔻
+	</button>
+</div>
+<div id='list' class='Dropm-content'>
+<center>
+	<a href='#'> Year 1 </a>
+	<a href='#'> Year 2 </a>
+	<a href='#'> Year 3 </a>
+</div>
+<script>
+<!--
+document.getElementById('button').onclick = function(){document.getElementById('list').classList.toggle('show');
+}
+//-->
+</script>
+
+
+
+
+
+

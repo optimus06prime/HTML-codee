@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        body{
+            background: lightpink;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            border: none;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            width:90px;
+            border-radius: 5px;
+        }
+        button:focus{
+            background: lightgrey;
+            border: 0.5px solid black;
+        }
+        .Ab{}
+        .Ab{
+            position: relative;
+            display: none;
+            font-family: serif;
+            background: white;
+            color:black;
+        }
+        .Ab:hover{
+            background: darkgrey;
+            color: white;
+        }
+        show{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <button id="B">
+        Dropdown
+    </button>
+ 
+    <div class="Ab" id="C">
+        <a href="#"> Home </a>
+        <a href="#"> About </a>
+        <a href="#"> Contact </a>
+        <a href="#"> About </a>
+        <a href="#"> Home </a>
+        <a href="#"> About </a>
+    </div>
+</body>
+<script>
+    document.getElementById('B').onclick=function(){document.getElementById('C').classList.toggle('show');
+    3
+</script>

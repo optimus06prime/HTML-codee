@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chatbot</title>
+</head>
+<body>
+    <h1>Chatbot Example</h1>
+    <div id="chatbox">
+        <p>Hotaru: Hello! How can I help you today?</p>
+    </div>
+    <input type="text" id="userInput" onkeypress="getUserInput(event)">
+    <div id=demo></div>
+</body>
+<script>
+    function getUserInput(event) {
+        if (event.key === "Enter") {
+            const userInput = document.getElementById("userInput").value;
+            document.getElementById("demo").innerHTML += `<p>You: ${userInput}</p>`;
+            document.getElementById("userInput").value = ""; // Clear the input field
+
+            // Call a function to generate a response
+            const botResponse = getBotResponse(userInput);
+
+            // Display the bot's response
+            document.getElementById("demo").innerHTML += `<p>Hotaru: ${botResponse}</p>`;
+        }
+    }
+
+    function getBotResponse(userInput) {
+        userInput = userInput.toLowerCase(); // Convert user input to lowercase for case-insensitive comparisons.
+        let botResponse = "I don't understand. Please ask another question.";
+
+        if (userInput.includes("hello") || userInput.includes("hi")) {
+            botResponse = "Hi there!";
+        } else if (userInput.includes("how are you")) {
+            botResponse = "I'm great thanks. You?";
+        } else if (userInput.includes("what can you do")) {
+            botResponse = "I'm just a simple chatbot. I can only answer a few questions";
+        } else if (userInput.includes("bye")) {
+            botResponse = "Jaane";
+        } else if (userInput.includes("what is your name ")) {
+            botResponse = "Hotaru";
+        } else if (userInput.includes("who programmed you")) {
+            botResponse = "Liveon sensei";
+        } else if (userInput.includes("i'm fine") || userInput.includes("i'm good")) {
+            botResponse = "Great. How is your day going?";
+         } else if (userInput.includes("going well")) {
+            botResponse = "Good to hear";
+        }
+        return botResponse;
+    }
+      
+</script>
+</html>
